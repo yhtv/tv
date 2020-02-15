@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-
-<html>
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
-<head>
-
-    <meta charset="utf-8">
-
-    <title>大片轮播</title>
-
-</head>
-<body>
-<script src="https://cdn.jsdelivr.net/hls.js/latest/hls.min.js"></script>
-<video id="video"></video>
-<script>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+  <title>Document</title>
+ </head>
+ <body>
+ <div>
+  <script src="https://cdn.jsdelivr.net/hls.js/latest/hls.min.js"></script>
+  <video id="video"></video>
+  <script>
   if(Hls.isSupported()) {
     var video = document.getElementById('video');
     var hls = new Hls();
-    hls.loadSource('http://aldirect.hls.huya.com/huyalive/30765679-2484192572-10669525853706125312-2847687498-10057-A-0-1_1200.m3u8');
+    hls.loadSource('http://140.249.30.36/tlivecloud-cdn.ysp.cctv.cn/001/2000266303.m3u8');
     hls.attachMedia(video);
     hls.on(Hls.Events.MANIFEST_PARSED,function() {
       video.play();
   });
- }
-</script>
-</body>
-
+  }
+  </script>
+ </body>
 </html>
