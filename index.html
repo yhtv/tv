@@ -1,37 +1,28 @@
 <!DOCTYPE html>
 
 <html>
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
 <head>
 
     <meta charset="utf-8">
 
-    <title>公司宣传片</title>
+    <title>大片轮播</title>
 
 </head>
-
 <body>
-
-    <h2>公司宣传片</h2>
-
-    <video width="320" height="240" controls autoplay>
-
-        <source src="http://ok.renzuida.com/1912/W和我的Z国.HD1280高清国语中字版.mp4" type="video/mp4">
-
-        <source src="gs.ogg" type="video/ogg">
-
-        <source src="gs.webm" type="video/webm">
-
-        <object data="gs.mp4" width="320" height="240">
-
-          <embed src="gs.swf" width="320" height="240"><p>如果你播放不了该视频，
-
-那是你的设备不支持该文件格式</p>
-
-        </object>
-
-    </video>
-
+<script src="https://cdn.jsdelivr.net/hls.js/latest/hls.min.js"></script>
+<video id="video"></video>
+<script>
+  if(Hls.isSupported()) {
+    var video = document.getElementById('video');
+    var hls = new Hls();
+    hls.loadSource('http://aldirect.hls.huya.com/huyalive/30765679-2484192572-10669525853706125312-2847687498-10057-A-0-1_1200.m3u8');
+    hls.attachMedia(video);
+    hls.on(Hls.Events.MANIFEST_PARSED,function() {
+      video.play();
+  });
+ }
+</script>
 </body>
 
 </html>
