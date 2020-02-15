@@ -21,7 +21,7 @@ var _hmt = _hmt || [];
 <body><center>
 
 
-<script src='/jwplayer/jwplayer.js' type='text/javascript'></script>
+<script src='https://yhtv.github.io/tv/jwplayer/jwplayer.js' type='text/javascript'></script>
 <script type='text/javascript'>jwplayer.key='fH3TTZCoJ8QdabrM+YC4Z48U3cnd8yDaPkaN0+XIAQo=';</script>
 
     </div>
@@ -58,15 +58,15 @@ var isiPad = navigator.userAgent.match(/iPad|iPhone|Android|Linux|iPod/i) != nul
 jwplayer('myElement').setup({
   playlist:[{
     file:'http://140.249.30.36/tlivecloud-cdn.ysp.cctv.cn/001/2000266303.m3u8',
-    provider:'/jwplayer/HLSProvider6.swf',
+    provider:'https://yhtv.github.io/tv/jwplayer/HLSProvider6.swf',
     type:'mp4',title:'数码高清网络电视直播'
   }],
-  flashplayer:'/jwplayer/jwplayer.flash.swf',
+  flashplayer:'https://yhtv.github.io/tv/jwplayer/jwplayer.flash.swf',
   width:'960',
   height:'650',
   primary:'flash',
         logo:{
-                      file:'/tv2018.png',
+                      file:'https://yhtv.github.io/tv//tv2018.png',
                       position : 'bottom-left'
                 },
   autostart:true,hls_live_flushurlcache: isIE()?true:false});
